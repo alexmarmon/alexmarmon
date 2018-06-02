@@ -2,10 +2,10 @@ const port = parseInt(process.env.PORT, 10)
 
 module.exports = {
   siteMetadata: {
-    title: 'Thats Lofty',
-    description: 'Website and app development company based in Coeur d\'Alene, Idaho.',
-    keywords: 'Development, Developer, Web Developer, Website Developer',
-    url: 'https://www.thatslofty.com',
+    title: 'Alex Marmon',
+    description: 'Developer & Entrepreneur living in Coeur d\'Alene, ID.',
+    keywords: 'Alex Marmon, Developer, Coeur d\'Alene Web Developer, Two7, That\'s Lofty',
+    url: 'https://www.alexmarmon.com',
     type: 'website'
     // OG image set in layout index
   },

@@ -16,7 +16,7 @@ const TemplateWrapper = ({ children, data }) => {
           { property: 'og:type', content: meta.type },
           { property: 'og:title', content: meta.title },
           { property: 'og:description', content: meta.description },
-          { property: 'og:image', content: `https://www.thatslofty.com${Logo}` }
+          { property: 'og:image', content: `https://www.alexmarmon.com${Logo}` }
         ]}
         link={[
         { rel: 'icon', href: favicon, type: 'image/x-icon' }

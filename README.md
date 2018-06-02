@@ -1,4 +1,4 @@
-lofty-gatsby-starter
+alexmarmon.com
 =====================
 
 ### Use nvm & install
