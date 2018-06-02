@@ -10,6 +10,3 @@ const startGatsby = () => {
 }
 
 startGatsby()
-
-// export app
-module.exports = app
