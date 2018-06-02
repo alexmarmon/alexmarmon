@@ -23,5 +23,14 @@ module.exports = {
         path: './src/data/',
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Josefin+Sans\:400',  // eslint-disable-line
+          'Raleway\:500'  // eslint-disable-line
+        ]
+      }
+    }
   ],
 }
