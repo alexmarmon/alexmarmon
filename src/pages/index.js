@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import styles from '../styles'
-import Logo from '../assets/images/lofty-logo.svg'
+// import Logo from '../assets/images/lofty-logo.svg'
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class HomePage extends React.Component {
 
   render = () => (
     <HomePageStyles>
-      <img src={Logo} alt="logo" />
+      {/* <img src={Logo} alt="logo" /> */}
       <p>Coming Soon...</p>
       <p>{this.props.data.dataJson.foo}</p>
       <a href="mailto:info@thatslofty.com">Contact</a>

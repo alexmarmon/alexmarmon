@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import favicon from '../assets/favicon.ico'
-import Logo from '../assets/images/lofty-logo.svg'
+import favicon from '../assets/favicon.svg'
+// import Logo from '../assets/images/lofty-logo.svg'
 
 const TemplateWrapper = ({ children, data }) => {
   const meta = data.site.siteMetadata
@@ -16,7 +16,7 @@ const TemplateWrapper = ({ children, data }) => {
           { property: 'og:type', content: meta.type },
           { property: 'og:title', content: meta.title },
           { property: 'og:description', content: meta.description },
-          { property: 'og:image', content: `https://www.alexmarmon.com${Logo}` }
+          // { property: 'og:image', content: `https://www.alexmarmon.com${Logo}` }
         ]}
         link={[
         { rel: 'icon', href: favicon, type: 'image/x-icon' }

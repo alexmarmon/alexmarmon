@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Favicon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Favicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#D8D8D8" cx="16" cy="16" r="16"></circle>
+        <text id="AM" font-family="ShadowsIntoLight, Shadows Into Light" font-size="20" font-weight="normal" line-spacing="32" fill="#2A2A2A">
+            <tspan x="5.26757812" y="23">AM</tspan>
+        </text>
+    </g>
+</svg>
