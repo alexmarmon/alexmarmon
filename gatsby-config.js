@@ -9,10 +9,6 @@ module.exports = {
     type: 'website'
     // OG image set in layout index
   },
-  proxy: {
-    prefix: '/api',
-    url: `http://127.0.0.1:${port + 30}`
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',

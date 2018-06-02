@@ -1,18 +1,12 @@
 const path = require('path')
 const express = require('express')
 const compress = require('compression')
-const bodyParser = require('body-parser')
-
-const router = require(path.resolve('./api/router')) // eslint-disable-line
 
 // get port
 const port = parseInt(process.env.PORT, 10)
 
 // create express instance
 const app = express()
-
-// use body parser for api requests
-app.use(bodyParser.json())
 
 // compress files before sending
 app.use(compress())
@@ -22,9 +16,6 @@ app.use(express.static('public'))
 
 // serve static folder
 // app.use('/assets', express.static('src/assets'))
-
-// serve api
-app.use('/api', router)
 
 // handles '/url/path' page refreshes to /index.html - spa
 app.get('*', (req, res) => {
