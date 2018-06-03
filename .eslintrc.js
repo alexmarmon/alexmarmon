@@ -19,7 +19,8 @@ module.exports = {
       "react/no-unused-state": 0,
       "no-unused-expressions": 0,
       "max-len": 0,
-      "react/prefer-stateless-function": 0
+      "react/prefer-stateless-function": 0,
+      "react/no-danger": 0
     },
     "env": {
       "browser": true,

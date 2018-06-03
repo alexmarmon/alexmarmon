@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import styles, { MainContainer } from '../styles'
+import Navigation from './navigation'
 import Me from '../assets/images/me.jpg'
 
 class Landing extends React.Component {
@@ -10,34 +11,28 @@ class Landing extends React.Component {
     this.state = {
       height: '100vh'
     }
-    window.onload = () => this.setupAnimation()
   }
 
   componentDidMount() {
+    window.onscroll = this.throttle(this.runOnScroll)
     this.setState({ height: window ? window.innerHeight : '100vh' })  // eslint-disable-line
-    // setup timelines object
-    this.timelines = {
-      left: { el: this.lineLeft, timeline: null, dir: 1 },
-      right: { el: this.lineRight, timeline: null, dir: -1 }
+  }
+
+  throttle = (fn) => {
+    let throttle
+    return () => {
+      if (!throttle) {
+        fn()
+        throttle = true
+        setTimeout(() => { throttle = false }, 300)
+      }
     }
-    window.TimelineLite ? this.setupAnimation() : null
   }
 
-  setupAnimation() {
-    const initialSlide = 70
-    Object.keys(this.timelines).forEach((key) => {
-      const el = this.timelines[key]
-      el.timeline = new window.TimelineLite({ paused: true })
-        .to(el.el, 0.15, { x: initialSlide * el.dir }, 0)
-        .to(el.el, 0.15, { width: 0 }, 0)
-    })
-  }
-
-  animateLine = (which, play) => {
-    if (play && this.timelines[which].timeline) {
-      this.timelines[which].timeline.play()
-    } else if (this.timelines[which].timeline) {
-      this.timelines[which].timeline.reverse()
+  runOnScroll = () => {
+    if ((this.more.getBoundingClientRect().top / window.innerHeight) < 0.65) {
+      window.onscroll = null
+      this.more.classList.add('hide')
     }
   }
 
@@ -50,18 +45,11 @@ class Landing extends React.Component {
         </div>
         <div className="backdrop" />
         <div className="links-container">
-          <div className="link" onMouseEnter={() => this.animateLine('left', true)} onMouseLeave={() => this.animateLine('left')}>
-            <Link to="/work">
-              <h3>My Work</h3>
-              <div ref={(el) => { this.lineLeft = el }} className="line left" />
-            </Link>
-          </div>
-          <div className="link" onMouseEnter={() => this.animateLine('right', true)} onMouseLeave={() => this.animateLine('right')}>
-            <Link to="/work">
-              <h3>Resume</h3>
-              <div ref={(el) => { this.lineRight = el }} className="line right" />
-            </Link>
-          </div>
+          <Navigation where="work" />
+        </div>
+        <div className="more" ref={(el) => { this.more = el }}>
+          <div className="more-line" />
+          <h3>more</h3>
         </div>
       </MainContainer>
     </LandingStyles>
@@ -73,6 +61,7 @@ const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   h1 {
     align-self: flex-start;
@@ -106,24 +95,26 @@ const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
     margin-left: 215px;
   }
 
-  .link {
-    display: inline-block;
-    margin: 20px 30px;
-    position: relative;
-    cursor: pointer;
-    .line {
-      cursor: pointer;
-      position: absolute;
-      bottom: -2px;
+  .more {
+    position: absolute;
+    bottom: -20px;
+    left: -75px;
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+    opacity: 1;
+    h3 {
+      display: inline-block;
+    }
+    .more-line {
+      display: inline-block;
       height: 1px;
-      width: 55px;
+      width: 40px;
+      margin-bottom: 4px;
+      margin-right: 10px;
       background-color: ${styles.darkFont};
-      &.left {
-        left: -12px;
-      }
-      &.right {
-        right: -12px;
-      }
+    }
+    &.hide {
+      opacity: 0;
     }
   }
 `

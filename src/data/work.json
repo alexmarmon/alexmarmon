@@ -1,0 +1,9 @@
+{
+  "name": "work",
+  "featured": {
+    "logo": "/src/assets/images/two7-logo.svg",
+    "image": "/src/assets/images/two7-image.jpg",
+    "copy": "Two7 is a small company that is focused on bringing high quality designs to life.  I’ve learned many valuable lessons since its Kickstarter launch in 2016 and I can’t wait to watch it grow.",
+    "link": "https://www.two-7.com"
+  } 
+}
