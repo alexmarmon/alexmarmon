@@ -19,8 +19,14 @@ const TemplateWrapper = ({ children, data }) => {
           // { property: 'og:image', content: `https://www.alexmarmon.com${Logo}` }
         ]}
         link={[
-        { rel: 'icon', href: favicon, type: 'image/x-icon' }
-      ]}
+          { rel: 'icon', href: favicon, type: 'image/x-icon' }
+        ]}
+        script={[
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineLite.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/easing/EasePack.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSPlugin.min.js' }
+        ]}
       />
       <div className="main-container">
         { children() }
