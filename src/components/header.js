@@ -17,6 +17,10 @@ const HeaderStyles = styled.div.attrs({ className: 'header-styles' })`
   width: 100vw;
   position: relative;
 
+  h1 {
+    align-self: flex-start;
+  }
+
   .top-line, .bottom-line {
     height: 1px;
     background-color: ${styles.darkFont};

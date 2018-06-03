@@ -20,7 +20,9 @@ module.exports = {
       "no-unused-expressions": 0,
       "max-len": 0,
       "react/prefer-stateless-function": 0,
-      "react/no-danger": 0
+      "react/no-danger": 0,
+      "import/no-dynamic-require": 0,
+      "global-require": 0
     },
     "env": {
       "browser": true,
