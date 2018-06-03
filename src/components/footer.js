@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import styles, { MainContainer } from '../styles'
+import styles, { MainContainer, media } from '../styles'
 import githubImg from '../assets/images/github.svg'
 import linkedinImg from '../assets/images/linkedin.svg'
 
@@ -26,7 +26,7 @@ export const query = graphql`
 const FooterStyles = styled.div.attrs({ className: 'footer-styles' })`
   width: 100vw;
   position: relative;
-  margin: ${styles.mediumSpace} 0px;
+  margin: ${styles.mediumSpace}px 0px;
 
   .main-container {
     flex-direction: row;
@@ -43,6 +43,20 @@ const FooterStyles = styled.div.attrs({ className: 'footer-styles' })`
   .github, .linkedin {
     height: 25px;
   }
+
+  ${media.tablet`
+    margin: ${styles.mediumSpace / 3}px 0px ${styles.mediumSpace / 2}px 0px;
+    p {
+      font-size: 16px;
+    }
+    a {
+      margin: 0 15px;
+    }
+    .github, .linkedin {
+      margin-top: 5px;
+      height: 18px;
+    }
+  `}
 `
 
 export default Footer

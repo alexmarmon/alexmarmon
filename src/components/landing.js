@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import styles, { MainContainer } from '../styles'
+import styles, { MainContainer, media } from '../styles'
 import Navigation from './navigation'
 import Me from '../assets/images/me.jpg'
 
@@ -41,27 +41,28 @@ class Landing extends React.Component {
       <MainContainer>
         <h1 className="dark">Alex Marmon</h1>
         <div className="image-container">
-          <img src={Me} alt="logo" />
+          <img src={Me} alt="" />
         </div>
         <div className="backdrop" />
         <div className="links-container">
           <Navigation where="work" />
         </div>
-        <div className="more" ref={(el) => { this.more = el }}>
-          <div className="more-line" />
-          <h3>more</h3>
-        </div>
       </MainContainer>
+      <div className="more" ref={(el) => { this.more = el }}>
+        <div className="more-line" />
+        <h3>more</h3>
+      </div>
     </LandingStyles>
   )
 }
 
 const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
+  min-height: 750px;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  ${''}
 
   h1 {
     align-self: flex-start;
@@ -70,7 +71,7 @@ const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
   .image-container {
     width: 70%;
     max-height: 500px;
-    height: 42.7vw;
+    height: 38.1vw;
     align-self: flex-end;
     text-align: right;
     margin: 20px 0;
@@ -97,9 +98,9 @@ const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
 
   .more {
     position: absolute;
-    bottom: -20px;
-    left: -75px;
-    transform: rotate(-90deg);
+    bottom: 30px;
+    left: 50%;
+    transform: rotate(-90deg) translateY(-48vw);
     transition: all 0.3s;
     opacity: 1;
     h3 {
@@ -117,6 +118,29 @@ const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
       opacity: 0;
     }
   }
+
+  ${media.largeDesktop`
+    .links-container {
+      margin-left: 14vw;
+    }
+  `}
+
+  ${media.tablet`
+    min-height: 600px;
+    .image-container {
+      height: 42.9vw;
+    }
+    .more {
+      transform: rotate(-90deg);
+      left: -15px;
+    }
+  `}
+
+  ${media.largePhone`
+    .links-container {
+      margin-left: 8vw;
+    }
+  `}
 `
 
 export default Landing

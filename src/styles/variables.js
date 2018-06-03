@@ -4,9 +4,9 @@ const colors = {
   darkFont: '#2A2A2A',
   lightFont: '#FFFFFF',
   // spacing
-  largeSpace: '200px',
-  mediumSpace: '100px',
-  smallSpace: '60px'
+  largeSpace: 200,
+  mediumSpace: 100,
+  smallSpace: 60
 }
 
 const mediaSizes = {

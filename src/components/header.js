@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import styles, { MainContainer } from '../styles'
+import styles, { MainContainer, media } from '../styles'
 
 const Header = ({ copy, type }) => (
   <HeaderStyles>
@@ -34,6 +34,23 @@ const HeaderStyles = styled.div.attrs({ className: 'header-styles' })`
     top: 40px;
     left: 50%;
   }
+
+  ${media.desktop`
+    .top-line { top: 27px; }
+    .bottom-line { top: 37px; }
+  `}
+  ${media.tablet`
+    .top-line { top: 25px; }
+    .bottom-line { top: 35px; }
+  `}
+  ${media.largePhone`
+    .top-line { top: 20px; }
+    .bottom-line { top: 30px; }
+  `}
+  ${media.phone`
+    .top-line { width: 47%; left: 43%; }
+    .bottom-line { width: 32%; left: 63%; }
+  `}
 `
 
 export default Header
