@@ -17,10 +17,12 @@ class Navigation extends React.Component {
   setupAnimation() {
     const initialSlide = 70
     Object.keys(this.timelines).forEach((key) => {
-      const el = this.timelines[key]
-      el.timeline = new window.TimelineLite({ paused: true })
-        .to(el.el, 0.15, { x: initialSlide * el.dir }, 0)
-        .to(el.el, 0.15, { width: 0 }, 0)
+      if (window.TimelineLite) {
+        const el = this.timelines[key]
+        el.timeline = new window.TimelineLite({ paused: true })
+          .to(el.el, 0.15, { x: initialSlide * el.dir }, 0)
+          .to(el.el, 0.15, { width: 0 }, 0)
+      }
     })
   }
 
