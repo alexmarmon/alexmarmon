@@ -29,6 +29,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-helmet": "^5.2.0",
+    "react-progressive-image": "^0.3.0",
     "styled-components": "^2.4.1"
   },
   "devDependencies": {

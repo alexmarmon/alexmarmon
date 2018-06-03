@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import ProgressiveImage from 'react-progressive-image'
 import styles, { MainContainer, media } from '../styles'
 import Navigation from './navigation'
 import Me from '../assets/images/me.jpg'
+import MeLowRes from '../assets/images/me-lowres.jpg'
 
 class Landing extends React.Component {
   constructor(props) {
@@ -41,7 +43,9 @@ class Landing extends React.Component {
       <MainContainer>
         <h1 className="dark">Alex Marmon</h1>
         <div className="image-container">
-          <img src={Me} alt="" />
+          <ProgressiveImage src={Me} placeholder={MeLowRes}>
+            {src => <img src={src} alt="" />}
+          </ProgressiveImage>
         </div>
         <div className="backdrop" />
         <div className="links-container">
