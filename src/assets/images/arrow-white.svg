@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="107px" height="13px" viewBox="0 0 107 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Work" transform="translate(-868.000000, -1830.000000)" stroke="#FFFFFF">
+            <g id="Ledgers" transform="translate(720.000000, 1323.000000)">
+                <g id="Hover" transform="translate(148.000000, 164.000000)">
+                    <g id="Arrow" transform="translate(0.000000, 343.000000)">
+                        <path d="M0.5,6.5 L105.5,6.5" id="Line-3"></path>
+                        <path d="M106.5,6.5 L97.5,0.5" id="Line-4"></path>
+                        <path d="M106.5,12.5 L97.5,6.5" id="Line-4" transform="translate(102.000000, 9.500000) scale(1, -1) translate(-102.000000, -9.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

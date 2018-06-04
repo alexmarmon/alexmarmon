@@ -5,5 +5,65 @@
     "image": "two7-image.jpg",
     "copy": "Two7 is a small company that is focused on bringing high quality designs to life.  I’ve learned many valuable lessons since its Kickstarter launch in 2016 and I can’t wait to watch it grow.",
     "link": "https://www.two-7.com"
-  } 
+  },
+  "work": [
+    {
+      "name": "uber",
+      "logo": "uber-logo.png",
+      "image": "uber-image.png",
+      "copy": "Uber’s moving forward campaign was a very important piece of their branding strategy. I was proud to help bring this animation piece to life.",
+      "gradientTop": "#C0DFF0",
+      "gradientBottom": "#99C8E9",
+      "fontColor": "#2A2A2A",
+      "link": "http://uber-moving-forward-v2.lamp.14four.com/#displayLimit=2"
+    },
+    {
+      "name": "ledgers",
+      "logo": "ledgers-logo.svg",
+      "image": "ledgers-image.png",
+      "copy": "From a small and simple summer web application, to a full Saas real estate tracking system. Two years and two rewrites later, this application has taught me more about development than I ever dreamed. ",
+      "gradientTop": "#80B9E6",
+      "gradientBottom": "#2196F3",
+      "fontColor": "#FFFFFF"
+    },
+    {
+      "name": "lays",
+      "logo": "lays-logo.png",
+      "image": "lays-image.jpg",
+      "copy": "I never thought my first AR development experience would involve putting a bag of chips with someone elses smile on your face.<br><br>But it did, and it was a blast to work on. I was very excited to be part of the team at 14Four that built this experience.",
+      "gradientTop": "#FCEF51",
+      "gradientBottom": "#DDBF36",
+      "fontColor": "#E31D1A"
+    },
+    {
+      "name": "rocktech",
+      "logo": "rocktech-logo.svg",
+      "image": "rocktech-image.jpg",
+      "copy": "This project was my first stab at working with an international company directly, and it presented new challenges that helped me grow as a developer, as well as a professional.",
+      "gradientTop": "#42636F",
+      "gradientBottom": "#22303B",
+      "fontColor": "#FFFFFF",
+      "link": "https://rocktech.thatslofty.com"
+    },
+    {
+      "name": "brand-content",
+      "logo": "brand-content-logo.svg",
+      "image": "brand-content-image.jpg",
+      "copy": "One of my first projects at 14Four, Brand Content is a complete .com that has a special place on this list.",
+      "gradientTop": "#FF9494",
+      "gradientBottom": "#A13232",
+      "fontColor": "#FFFFFF",
+      "link": "http://brandcontent.com"
+    },
+    {
+      "name": "toyota",
+      "logo": "toyota-logo.png",
+      "image": "toyota-image.png",
+      "copy": "Toyota Sales Events offered new and exciting challenges every season. With up to 70,000 versions at a time, I am proud to have played a major role in their creation.",
+      "gradientTop": "#FFFFFF",
+      "gradientBottom": "#D1D1D1",
+      "fontColor": "#2A2A2A",
+      "link": "http://toyota-2018-may-v6.lamp.14four.com/"
+    }
+  ]
 }

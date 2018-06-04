@@ -20,6 +20,10 @@ class Landing extends React.Component {
     this.setState({ height: window ? window.innerHeight : '100vh' })  // eslint-disable-line
   }
 
+  componentWillUnmount() {
+    window.onscroll = null
+  }
+
   throttle = (fn) => {
     let throttle
     return () => {
@@ -31,8 +35,9 @@ class Landing extends React.Component {
     }
   }
 
+
   runOnScroll = () => {
-    if ((this.more.getBoundingClientRect().top / window.innerHeight) < 0.65) {
+    if (this.more && ((this.more.getBoundingClientRect().top / window.innerHeight) < 0.65)) {
       window.onscroll = null
       this.more.classList.add('hide')
     }

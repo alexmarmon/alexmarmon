@@ -45,7 +45,7 @@ const FooterStyles = styled.div.attrs({ className: 'footer-styles' })`
   }
 
   ${media.tablet`
-    margin: ${styles.mediumSpace / 3}px 0px ${styles.mediumSpace / 2}px 0px;
+    margin: ${styles.mediumSpace / 2}px 0px;
     p {
       font-size: 16px;
     }
