@@ -9,7 +9,7 @@
     "prod": "cross-env PORT=3000 node build/prod-server.js",
     "lint": "eslint -c .eslintrc.js --ext .js --ext .jsx ./src; exit 0",
     "lint-fix": "eslint -c .eslintrc.js --fix --ext .js --ext .jsx ./src; exit 0",
-    "push": "gatbsy build; git add .; git commit -m \"$M\"; git push; ssh -t lofty \"cd ../sites/alexmarmon; git pull;\""
+    "push": "gatsby build; git add .; git commit -m \"$M\"; git push; ssh -t lofty \"cd ../sites/alexmarmon; git pull;\""
   },
   "dependencies": {
     "axios": "^0.18.0",
