@@ -16,6 +16,7 @@ const TemplateWrapper = ({ children, data }) => {
           { property: 'og:type', content: meta.type },
           { property: 'og:title', content: meta.title },
           { property: 'og:description', content: meta.description },
+          { name: 'google-site-verification', content: 'eX89TsomVRsLsKoDvNrtrgQyKIr45Kl1EetT2iIHEU4' }
           // { property: 'og:image', content: `https://www.alexmarmon.com${Logo}` }
         ]}
         link={[
