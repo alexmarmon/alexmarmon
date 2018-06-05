@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import styles, { MainContainer } from '../styles'
 import Me from '../assets/images/me.jpg'
+import Resume from '../assets/Resume.pdf'
 
 class Navigation extends React.Component {
   componentDidMount() {
@@ -43,10 +44,10 @@ class Navigation extends React.Component {
         </Link>
       </div>
       <div className="link" onMouseEnter={() => this.animateLine('right', true)} onMouseLeave={() => this.animateLine('right')}>
-        <Link to="/work">
+        <a href={Resume} target="_blank">
           <h3>Resume</h3>
           <div ref={(el) => { this.lineRight = el }} className="line right" />
-        </Link>
+        </a>
       </div>
     </NavigationStyles>
   )
