@@ -16,7 +16,8 @@ const TemplateWrapper = ({ children, data }) => {
           { property: 'og:type', content: meta.type },
           { property: 'og:title', content: meta.title },
           { property: 'og:description', content: meta.description },
-          { name: 'google-site-verification', content: 'eX89TsomVRsLsKoDvNrtrgQyKIr45Kl1EetT2iIHEU4' }
+          { name: 'google-site-verification', content: 'eX89TsomVRsLsKoDvNrtrgQyKIr45Kl1EetT2iIHEU4' },
+          { name: 'google-site-verification', content: 'Hzmhdm5npEY9ai1K5Ngosy5_0TA8xx3V0_tabQshj7w' }
           // { property: 'og:image', content: `https://www.alexmarmon.com${Logo}` }
         ]}
         link={[
