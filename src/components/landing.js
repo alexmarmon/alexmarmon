@@ -11,13 +11,14 @@ class Landing extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      height: '100vh'
+      height: '100vh',
+      opacity: 0
     }
   }
 
   componentDidMount() {
     window.onscroll = this.throttle(this.runOnScroll)
-    this.setState({ height: window ? window.innerHeight : '100vh' })  // eslint-disable-line
+    this.setState({ height: window ? window.innerHeight : '100vh', opacity: 1 })  // eslint-disable-line
   }
 
   componentWillUnmount() {
@@ -57,7 +58,7 @@ class Landing extends React.Component {
           <Navigation where="work" />
         </div>
       </MainContainer>
-      <div className="more" ref={(el) => { this.more = el }} style={{ top: this.state.height ? this.state.height - 50 : '', opacity: 1 }}>
+      <div className="more" ref={(el) => { this.more = el }} style={{ top: this.state.height ? this.state.height - 50 : '', opacity: this.state.opacity }}>
         <div className="more-line" />
         <h3>more</h3>
       </div>
