@@ -57,7 +57,7 @@ class Landing extends React.Component {
           <Navigation where="work" />
         </div>
       </MainContainer>
-      <div className="more" ref={(el) => { this.more = el }} style={{ top: this.state.height ? this.state.height - 50 : '' }}>
+      <div className="more" ref={(el) => { this.more = el }} style={{ top: this.state.height ? this.state.height - 50 : '', opacity: 1 }}>
         <div className="more-line" />
         <h3>more</h3>
       </div>
@@ -106,6 +106,7 @@ const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
   }
 
   .more {
+    opacity: 0;
     position: absolute;
     ${''/* bottom: 30px; */}
     left: 50%;
