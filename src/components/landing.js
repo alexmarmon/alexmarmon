@@ -40,7 +40,7 @@ class Landing extends React.Component {
   runOnScroll = () => {
     if (this.more && ((this.more.getBoundingClientRect().top / window.innerHeight) < 0.65)) {
       window.onscroll = null
-      this.more.classList.add('hide')
+      this.setState({ opacity: 0 })
     }
   }
 
@@ -107,7 +107,6 @@ const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
   }
 
   .more {
-    opacity: 0;
     position: absolute;
     ${''/* bottom: 30px; */}
     left: 50%;
@@ -124,9 +123,6 @@ const LandingStyles = styled.div.attrs({ className: 'landing-styles' })`
       margin-bottom: 4px;
       margin-right: 10px;
       background-color: ${styles.darkFont};
-    }
-    &.hide {
-      opacity: 0;
     }
   }
 
