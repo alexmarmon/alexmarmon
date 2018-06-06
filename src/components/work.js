@@ -28,9 +28,11 @@ class Work extends React.Component {
       if (this.timeline.progress() === 1) {
         this.animate()
       } else {
+        this.tapIcon.classList.add('hidden')
         this.animate(true)
       }
     } else {
+      this.tapIcon.classList.add('hidden')
       this.animate(true)
     }
   }
@@ -56,6 +58,7 @@ class Work extends React.Component {
           </a>
         ) : null}
       </div>
+      <img className="mobile-tap-icon" ref={(el) => { this.tapIcon = el }} src={require('../assets/images/tap-icon.svg')} alt="" />
     </WorkStyles>
   )
 }
@@ -146,17 +149,41 @@ const WorkStyles = styled.div.attrs({ className: 'work-styles' })`
     }
   }
 
+  .mobile-tap-icon {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
   ${media.largePhone`
-    width: 100%;
-    height: 65vw;
+    .hover-container {
+      padding: 5%;
+    }
+
+    .arrow-container, .copy {
+      margin-top: 15px;
+    }
+
+    &.brand-content .logo-small {
+      max-width: 70%;
+    }
   `}
 
   ${media.phone`
     width: 100%;
     height: 95vw;
 
-    &.brand-content .logo-small {
-      max-width: 70%;
+    .mobile-tap-icon {
+      opacity: 0.75;
+      visibility: visible;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 30px;
     }
   `}
 `
