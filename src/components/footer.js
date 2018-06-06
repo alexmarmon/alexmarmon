@@ -26,7 +26,8 @@ export const query = graphql`
 const FooterStyles = styled.div.attrs({ className: 'footer-styles' })`
   width: 100vw;
   position: relative;
-  margin: ${styles.mediumSpace}px 0px;
+  margin-top: ${styles.mediumSpace}px;
+  padding-bottom: ${styles.mediumSpace}px;
 
   .main-container {
     flex-direction: row;
@@ -45,7 +46,9 @@ const FooterStyles = styled.div.attrs({ className: 'footer-styles' })`
   }
 
   ${media.tablet`
-    margin: ${styles.mediumSpace / 2}px 0px;
+    /* margin: ${styles.mediumSpace / 2}px 0px; */
+    margin-top: ${styles.mediumSpace / 2}px;
+    padding-bottom: ${styles.mediumSpace / 2}px;
     p {
       font-size: 16px;
     }
