@@ -1,7 +1,7 @@
 {
   "name": "alexmarmon",
   "description": "Personal Portfolio Site",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Alex Marmon",
   "scripts": {
     "build": "gatsby build",
