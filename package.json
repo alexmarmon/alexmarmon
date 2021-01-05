@@ -13,7 +13,7 @@
     "push": "gatsby build; git add .; git commit -m \"$M\"; git push; ssh -t lofty \"cd ../sites/alexmarmon; git pull;\""
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.18.3",
     "chokidar": "^2.0.3",
     "compression": "^1.7.2",
